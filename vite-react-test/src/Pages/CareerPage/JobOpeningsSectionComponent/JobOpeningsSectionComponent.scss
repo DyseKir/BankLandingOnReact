@@ -1,0 +1,115 @@
+.JobOpeningsSection {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 80px;
+	}
+	&__text-block {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+		width: 1296px;
+	}
+	&__job-block {
+		display: flex;
+		gap: 28px;
+		flex-wrap: wrap;
+	}
+	&__title {
+		color: var(--background-color-2);
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 500;
+	}
+	&__text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+	&__article {
+		width: 784px;
+
+		display: flex;
+		padding: 50px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 50px;
+
+		border-radius: 16px;
+		border: 1px solid var(--border-color);
+		background: var(--text-color-2);
+	}
+	&__article-block-1 {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+	&__article-block-1-title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 30px;
+		font-weight: 600;
+	}
+	&__article-block-text {
+		display: flex;
+		gap: 10px;
+	}
+	&__article-text {
+		color: var(--text-color-4);
+		text-align: center;
+		font-size: 18px;
+		font-weight: 300;
+		display: inline-block;
+		padding: 8px 16px;
+		border-radius: 68px;
+		border: 1px solid var(--Grey-15, #262626);
+		background: var(--Grey-10, #1a1a1a);
+	}
+	&__article-text-info-title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 30px;
+		font-weight: 600;
+	}
+	&__article-text-info {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+	&__article-block-2 {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+	}
+	&__article-block-3 {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	&__article-block-3-text-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__article-button {
+		color: var(--text-color-2);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+
+		background-color: var(--background-color-2);
+		display: flex;
+		padding: 16px 30px;
+		align-items: center;
+
+		border: none;
+		border-radius: 82px;
+		background: var(--Green-60, #caff33);
+	}
+}

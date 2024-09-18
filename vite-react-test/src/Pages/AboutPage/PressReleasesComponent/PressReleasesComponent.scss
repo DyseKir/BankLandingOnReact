@@ -1,0 +1,103 @@
+.PressReleasesComponent {
+	padding-top: 150px;
+	&__wrapper-block {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 80px;
+	}
+
+	&__title-block {
+		display: flex;
+		width: 1296px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+
+		gap: 30px;
+	}
+	&__title {
+		color: var(--background-color-2);
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 400;
+	}
+	&__title-text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+	}
+	&__article-block-wrapper {
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+	&__article-block {
+		display: flex;
+		align-items: flex-start;
+		gap: 30px;
+	}
+
+	&__article {
+		display: flex;
+		padding: 30px;
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+		width: 782px;
+
+		border-radius: 40px 40px 16px 16px;
+		border: 1px solid var(--border-color);
+		background: var(--text-color-2);
+	}
+
+	&__article-text-block {
+		display: flex;
+		padding: 0px 30px;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__article-title-block {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	&__article-title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+	}
+	&__article-text-wrapper {
+		display: flex;
+
+		gap: 10px;
+	}
+	&__article-text {
+		color: var(--text-color-4);
+		text-align: center;
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+
+		display: inline-block;
+		padding: 8px 16px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		border-radius: 68px;
+		border: 1px solid var(--border-color);
+		background: var(--background-color);
+	}
+	&__article-main-text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+}

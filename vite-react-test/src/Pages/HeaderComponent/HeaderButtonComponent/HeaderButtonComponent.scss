@@ -1,0 +1,29 @@
+.header__sign-button,
+.header__log-button {
+	color: var(--text-color);
+	font-family: 'Lexend', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	border: none;
+	background-color: inherit;
+
+	padding: 14px 30px;
+	transition: 0.5s ease;
+	border-radius: 82px;
+	cursor: pointer;
+
+	@media screen and (max-width: 1440px) {
+		font-size: 14px;
+		padding: 12px 24px;
+	}
+	@media screen and (max-width: 390px) {
+		display: none;
+	}
+}
+
+.active {
+	color: var(--text-color-2);
+	background-color: var(--background-color-2);
+	border-radius: 82px;
+}

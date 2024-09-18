@@ -1,0 +1,157 @@
+.log-in-modal {
+	display: flex;
+	width: 1326px;
+	padding: 100px 150px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 40px;
+	border-radius: 20px;
+	border: 1px solid var(--border-color);
+	margin: 0 135px;
+
+	&__title {
+		color: var(--background-color-2);
+		text-align: center;
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 500;
+	}
+
+	&__text {
+		color: var(--text-color-4);
+		text-align: center;
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	&__title-block {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		align-self: stretch;
+	}
+
+	&__input-block-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+		align-self: stretch;
+	}
+
+	&__input-block {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		align-self: stretch;
+	}
+
+	&__input {
+		display: flex;
+		padding: 24px;
+		align-items: center;
+		gap: 10px;
+		width: 498px;
+		height: 74px;
+		border-radius: 88px;
+		border: 1px solid var(--border-color);
+		background: var(--background-color);
+		color: var(--text-color-5);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 150%;
+	}
+
+	&__buttons-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		width: 100%;
+	}
+
+	&__log-btn,
+	&__sign-btn {
+		padding: 18px 20px;
+		align-items: center;
+		gap: 10px;
+		border-radius: 64px;
+		width: 518px;
+		height: 64px;
+		text-align: center;
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+
+	&__log-btn {
+		background: var(--background-color-2);
+		border: none;
+		color: var(--border-color);
+	}
+
+	&__sign-btn {
+		border: 1px solid var(--border-color-1);
+		background: var(--border-color);
+		color: var(--text-color);
+	}
+
+	&__continue-text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 150%;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+	}
+
+	&__continue-text::before,
+	&__continue-text::after {
+		content: '';
+		flex: 1;
+		height: 1px;
+		background: var(--text-color-4);
+	}
+
+	&__social-icons {
+		display: flex;
+		gap: 24px;
+		padding: 0 94px;
+	}
+
+	&__social-icon {
+		cursor: pointer;
+	}
+
+	&__pass-link-wrapper {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	&__pass-link {
+		color: var(--text-color);
+		text-align: center;
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 150%;
+		text-decoration-line: underline;
+	}
+
+	&__input.invalid {
+		border-color: red;
+	}
+
+	&__input.valid {
+		border-color: green;
+	}
+}

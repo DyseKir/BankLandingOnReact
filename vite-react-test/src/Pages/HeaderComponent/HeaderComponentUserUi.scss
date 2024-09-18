@@ -1,0 +1,24 @@
+@import './HeaderLogoComponent/HeaderLogoComponent.scss';
+
+.header {
+	position: relative;
+	margin: 50px 0 52px 0;
+	padding: 20px 34px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 100px;
+	border: 1px solid var(--border-color);
+
+	@media screen and (max-width: 1440px) {
+		margin: 30px auto;
+		width: 1280px;
+		padding: 14px 24px;
+	}
+
+	@media screen and (max-width: 390px) {
+		margin: 40px 0px 50px 0px;
+		width: 358px;
+		padding: 14px 14px 14px 24px;
+	}
+}

@@ -1,0 +1,52 @@
+.HeroCareerPageSection {
+	background-color: var(--text-color-2);
+	width: 1600px;
+	height: 816px;
+	padding: 50px;
+	border-radius: 20px;
+	position: relative;
+	&__hero-image {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		z-index: 0;
+	}
+	&__text-block-wrapper {
+		width: 790px;
+		height: 494px;
+		background: var(--background-color);
+		border-radius: 20px 0px 80px 20px;
+		z-index: 1;
+		position: relative;
+	}
+	&__text-block {
+		display: flex;
+		padding: 80px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 22px;
+	}
+	&__title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 58px;
+		font-weight: 500;
+	}
+
+	&__title-span {
+		color: var(--background-color-2);
+		font-family: 'Lexend', sans-serif;
+		font-size: 58px;
+		font-weight: 500;
+	}
+	&__text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+	&__image {
+		position: absolute;
+		height: 716px;
+	}
+}

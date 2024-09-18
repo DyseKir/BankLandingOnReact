@@ -1,0 +1,49 @@
+.custom-select {
+	display: inline-flex;
+	padding: 18px;
+	flex-direction: column;
+	gap: 8px;
+	width: 222px;
+	border: 1px solid var(--border-color);
+	border-radius: 20px 0px 0px 0px;
+	position: relative;
+	background: var(--text-color-2);
+	cursor: pointer;
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		align-self: stretch;
+	}
+	&__container-text {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	&__text {
+		color: var(--text-color-3);
+		font-family: 'Lexend', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+	}
+	&__options {
+		display: flex;
+		flex-direction: column;
+		top: 100%;
+		left: 0%;
+		transform: translate(-1px, 1px);
+		position: absolute;
+		z-index: 1;
+	}
+	&__container-img {
+		width: 34px;
+		height: 34px;
+		border-radius: 50% 50%;
+		object-fit: cover;
+	}
+}
+.custom-select-variant-2 {
+	border-radius: 0px 20px 0px 0px; // ваши уникальные стили
+	// добавьте другие уникальные стили
+}

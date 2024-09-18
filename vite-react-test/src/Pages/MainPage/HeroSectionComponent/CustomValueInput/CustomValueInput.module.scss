@@ -1,0 +1,20 @@
+.custom-value-input {
+	display: flex;
+	padding: 26px 18px;
+	width: 222px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	background: var(--text-color-2);
+	border: 1px solid var(--border-color);
+	border-radius: 0px 0px 0px 20px;
+	outline: none;
+
+	color: var(--text-color);
+	font-family: 'Lexend', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+.custom-value-input-variant-2 {
+	border-radius: 0px 0px 20px 0px;
+}

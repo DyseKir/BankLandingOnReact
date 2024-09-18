@@ -1,0 +1,73 @@
+.MissionVisionSection {
+	padding-top: 150px;
+	display: flex;
+	width: 1596px;
+	flex-direction: column;
+	gap: 80px;
+	&__title-text-block {
+		display: flex;
+		width: 1296px;
+		flex-direction: column;
+		gap: 14px;
+	}
+	&__title {
+		color: var(--background-color-2);
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 400;
+	}
+	&__text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+	&__img-text-block-mission {
+		display: flex;
+		align-items: center;
+	}
+	&__img-text-block-vision {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+	&__img-block {
+		display: flex;
+		width: 664px;
+		height: 620px;
+		padding: 60px 60px 0px 60px;
+		flex-direction: column;
+		gap: 10px;
+
+		border-radius: 50px 50px 20px 20px;
+		border: 1px solid var(--border-color);
+	}
+
+	&__img-block-container-text-block-mission,
+	&__img-block-container-text-block-vision {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+	}
+	&__img-block-container-text-block-mission {
+		border-left: 1px solid var(--background-color-2);
+		padding-left: 50px;
+	}
+	&__img-block-container-text-block-vision {
+		border-right: 1px solid var(--background-color-2);
+		padding-right: 50px;
+	}
+	&__img-block-container-title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 38px;
+		font-weight: 500;
+	}
+	&__img-block-container-text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+}

@@ -1,0 +1,127 @@
+:root {
+	scroll-behavior: smooth;
+	--primary-color: ;
+	--secondary-color: ;
+	--background-color: #1a1a1a;
+	--background-color-2: #caff33;
+	--background-color-3: #22251b;
+	--text-color: #fff;
+	--text-color-2: #1c1c1c;
+	--text-color-3: #e4e4e7;
+	--text-color-4: #b3b3b3;
+	--text-color-5: #59595a;
+	--text-color-6: #4c4c4d;
+	--border-color: #262626;
+	--border-color-1: #333;
+
+	--error-1: red;
+	--valid-1: 2px solid green;
+	--invalid: 2px solid red;
+
+	width: 1596px;
+	margin: 0 auto;
+
+	/* @media screen and (max-width: 1440px) {
+		width: 1280px;
+	}
+
+	@media screen and (max-width: 390px) {
+		width: 358px;
+	} */
+
+	/* font-family: "Lexend", sans-serif;
+  font-family: "Inter", sans-serif;
+  @media screen and (max-width: 1440px) {
+  }
+  @media screen and (max-width: 390px) {
+  }  */
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+pre,
+form,
+fieldset,
+legend,
+table,
+th,
+td,
+div,
+span,
+header,
+footer,
+main,
+nav,
+section,
+article,
+aside,
+figure,
+figcaption,
+input,
+textarea,
+button,
+a {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: var(--text-color);
+	background-color: #1a1a1a;
+	font-family: 'Lexend', 'Inter', sans-serif;
+}
+
+ul,
+li,
+a {
+	list-style: none;
+	text-decoration: none;
+}
+
+.error {
+	color: var(--error-1);
+}
+
+.valid {
+	color: var(--valid-1);
+}
+
+.invalid {
+	color: var(--invalid);
+}
+
+.container {
+	width: 1596px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 1440px) {
+		width: 1280px;
+	}
+
+	@media screen and (max-width: 390px) {
+		width: 358px;
+	}
+}
+
+.is-hidden {
+	display: none !important;
+}

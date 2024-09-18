@@ -1,0 +1,86 @@
+.future-section {
+	padding: 75px 0;
+
+	&__logo-text,
+	&__span-text {
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 500;
+	}
+
+	&__logo-text {
+		color: var(--text-color);
+	}
+
+	&__span-text {
+		color: var(--background-color-2);
+	}
+
+	&__text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	&__buttons-block {
+		display: flex;
+		padding: 48px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		width: 310px;
+		height: 338px;
+		border-radius: 12px;
+		background: var(--text-color-2);
+	}
+
+	&__button {
+		cursor: pointer;
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		border-radius: 100px;
+		border: 1px solid var(--border-color);
+		background: var(--text-color-2);
+		align-self: stretch;
+		padding: 18px 20px;
+		gap: 10px;
+		transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+		&:hover {
+			color: var(--background-color-2);
+			background-color: var(--background-color);
+			transform: scale(1.05); /* Увеличение при наведении */
+		}
+
+		&.active {
+			color: var(--background-color-2);
+			background-color: var(--background-color);
+			transform: scale(1.1); /* Увеличение активной кнопки */
+		}
+	}
+
+	&__wrapper {
+		padding-top: 80px;
+		display: flex;
+		gap: 28px;
+	}
+
+	&__wrapper-blocks {
+		display: flex;
+		align-items: flex-start;
+		gap: 30px;
+		width: 1258px;
+		height: 574px;
+		flex-wrap: wrap;
+		opacity: 0;
+		transform: translateY(20px); /* Начальная позиция снизу */
+		transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+	}
+	&__wrapper-blocks.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

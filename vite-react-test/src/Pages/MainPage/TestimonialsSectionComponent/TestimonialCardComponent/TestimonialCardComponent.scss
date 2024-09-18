@@ -1,0 +1,47 @@
+.testimonial-card {
+	width: 404px;
+	height: 322px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	opacity: 0; /* Начальное состояние для анимации */
+	transform: translateY(20px); /* Начальное смещение для анимации */
+	transition: opacity 0.8s ease, transform 0.8s ease;
+
+	&.visible {
+		opacity: 1; /* Конечное состояние для анимации */
+		transform: translateY(0); /* Конечное смещение для анимации */
+	}
+	&__text,
+	&__user {
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		line-height: 150%;
+		text-align: center;
+	}
+
+	&__text {
+		color: var(--text-color);
+		font-weight: 400;
+	}
+
+	&__user {
+		color: var(--background-color-2);
+		font-weight: 500;
+	}
+
+	&__comas-block {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		&::after,
+		&::before {
+			content: '';
+			background-color: var(--border-color);
+			width: 152px;
+			height: 1px;
+		}
+	}
+}

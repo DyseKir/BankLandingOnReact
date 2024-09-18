@@ -1,0 +1,39 @@
+.testimonials-section__buttons {
+	border-radius: 82px;
+	border: 1px solid var(--border-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 14px;
+}
+
+.testimonials-section__button-business,
+.testimonials-section__button-indiv {
+	font-family: 'Lexend', sans-serif;
+	font-size: 16px;
+	color: var(--text-color);
+	display: flex;
+	padding: 14px 24px;
+	justify-content: center;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+
+	&.active {
+		background: var(--background-color-2);
+		color: var(--text-color-2);
+		border-radius: 140px;
+		transition: background-color 0.8s, color 0.3s ease; /* Добавляем плавный переход */
+	}
+}
+
+.testimonials-section__carousel-left-arrow,
+.testimonials-section__carousel-right-arrow {
+	cursor: pointer;
+
+	transition: transform 0.2s ease-in-out; /* Плавный переход для анимации */
+
+	&:active {
+		transform: scale(0.95); /* Уменьшение размера при нажатии */
+	}
+}

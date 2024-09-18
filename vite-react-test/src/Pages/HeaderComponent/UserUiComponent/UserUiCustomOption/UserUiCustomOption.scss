@@ -1,0 +1,25 @@
+.UserUiCustomOption-img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+}
+.UserUiCustomSelect-options {
+	position: absolute;
+	top: 74%;
+	z-index: 4;
+	background-color: var(--background-color);
+}
+.UserUiCustomOption {
+	border: 1px solid var(--border-color);
+	border-radius: 18px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	width: 200px;
+
+	color: var(--text-color-3);
+	font-family: 'Lexend', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 150%;
+}

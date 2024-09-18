@@ -1,0 +1,33 @@
+.custom-option {
+	display: inline-flex;
+	padding: 18px;
+	flex-direction: column;
+	gap: 8px;
+	width: 222px;
+	border: 1px solid var(--border-color);
+	background: var(--text-color-2);
+	z-index: 1;
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	&__container-text {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	&__text {
+		color: var(--text-color-3);
+		font-family: 'Lexend', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+	}
+	&__container-img {
+		width: 34px;
+		height: 34px;
+		border-radius: 50% 50%;
+		object-fit: cover;
+	}
+}

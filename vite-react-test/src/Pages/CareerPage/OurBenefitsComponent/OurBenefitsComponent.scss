@@ -1,0 +1,135 @@
+.ourBenefitsSection {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 80px;
+	padding-bottom: 150px;
+	&__title-wrapper {
+		width: 1296px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+	}
+	&__title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 500;
+	}
+	&__title-span {
+		color: var(--background-color-2);
+		font-family: 'Lexend', sans-serif;
+		font-size: 48px;
+		font-weight: 500;
+	}
+	&__text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	&__article-wrapper-block {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+	}
+
+	&__article-wrapper {
+		display: flex;
+		gap: 100px;
+		position: relative;
+	}
+	&__article-wrapper:nth-of-type(2)::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -16%;
+		width: 100%;
+		height: 1px;
+		background: repeating-linear-gradient(
+			to right,
+			var(--border-color),
+			var(--border-color) 10px,
+			/* Длина штриха */ transparent 10px,
+			/* Начало пробела */ transparent 20px /* Конец пробела */
+		);
+	}
+
+	&__article {
+		width: 748px;
+		display: flex;
+		padding: 50px;
+		flex-direction: column;
+		gap: 30px;
+		position: relative;
+	}
+	&__article-border-2::before {
+		content: '';
+		position: absolute;
+		left: -7%;
+		top: 0;
+		width: 1px;
+		height: 320px;
+		background: repeating-linear-gradient(
+			to bottom,
+			var(--border-color),
+			var(--border-color) 10px,
+			/* Длина штриха */ transparent 10px,
+			/* Начало пробела */ transparent 20px /* Конец пробела */
+		);
+	}
+	&__article-border-4::before {
+		content: '';
+		position: absolute;
+		left: -7%;
+		top: 0;
+		width: 1px;
+		height: 320px;
+		background: repeating-linear-gradient(
+			to bottom,
+			var(--border-color),
+			var(--border-color) 10px,
+			/* Длина штриха */ transparent 10px,
+			/* Начало пробела */ transparent 20px /* Конец пробела */
+		);
+	}
+
+	&__article-title-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__article-title {
+		color: var(--text-color);
+		font-family: 'Lexend', sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	&__article-text {
+		color: var(--text-color-4);
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	&__article-border-1 {
+		border-radius: 50px 20px;
+		border: 1px solid var(--border-color);
+	}
+	&__article-border-2 {
+		border-radius: 20px 50px;
+		border: 1px solid var(--border-color);
+	}
+	&__article-border-3 {
+		border-radius: 20px 50px;
+		border: 1px solid var(--border-color);
+	}
+	&__article-border-4 {
+		border-radius: 50px 20px;
+		border: 1px solid var(--border-color);
+	}
+}

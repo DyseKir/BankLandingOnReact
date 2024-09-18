@@ -1,0 +1,122 @@
+{
+	"Product-section": {
+		"individual": [
+			{
+				"src": "/Icon-Container-home-page-1.svg",
+				"alt": "Checking accounts",
+				"title": "Checking Accounts",
+				"text": "Experience seamless access to your funds with our versatile checking account options. Enjoy benefits like online banking, mobile app access, and free ATM withdrawals to manage your money with ease."
+			},
+			{
+				"src": "/Icon-Container-home-page-2.svg",
+				"alt": "Savings accounts",
+				"title": "Savings Accounts",
+				"text": "Grow your savings effortlessly with our competitive interest rates and flexible savings account options. Whether you're saving for a major purchase or building a nest egg, our accounts offer the right solutions for you."
+			},
+			{
+				"src": "/Icon-Container-home-page-3.svg",
+				"alt": "Loans and mortgages",
+				"title": "Loans and Mortgages",
+				"text": "Achieve your financial goals with our diverse loan and mortgage products. From personal loans to home mortgages, our dedicated loan officers will assist you through every step of the process to secure the funds you need."
+			}
+		],
+		"business": [
+			{
+				"src": "/Icon-Container-home-page-1.svg",
+				"alt": "Checking accounts",
+				"title": "Business Checking Accounts",
+				"text": "Simplify your business finances with our range of checking account options designed for business needs. Enjoy features such as easy online management, no monthly fees, and access to a network of ATMs."
+			},
+			{
+				"src": "/Icon-Container-home-page-2.svg",
+				"alt": "Savings accounts",
+				"title": "Business Savings Accounts",
+				"text": "Optimize your business savings with competitive interest rates and flexible terms. Whether you’re planning for future investments or setting aside emergency funds, our savings solutions are tailored for your business."
+			},
+			{
+				"src": "/Icon-Container-home-page-3.svg",
+				"alt": "Loans and mortgages",
+				"title": "Business Loans and Mortgages",
+				"text": "Support your business growth with our tailored loan and mortgage options. Whether you need capital for expansion, equipment financing, or real estate purchases, our team is here to provide personalized assistance."
+			}
+		]
+	},
+	"testimonials": {
+		"individual": [
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "Starting my own business was a big step, and YourBank provided the financial support and guidance I needed. Their tailored solutions have been crucial in setting up my business accounts and securing financing.",
+				"user": "John D"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "I've relied on YourBank for years, and their excellent service has made managing my finances simple and efficient. Their innovative digital banking tools have been a game-changer for me.",
+				"user": "Sara T"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "YourBank's mobile app has revolutionized how I handle my finances. It’s user-friendly and secure, allowing me to track my accounts and make transactions wherever I am.",
+				"user": "Emily G"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "The customer service at YourBank is top-notch. Whenever I encounter any issues, their support team is quick to resolve them, making my experience seamless and stress-free.",
+				"user": "Kirby L"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "The financial products offered are excellent, with great features and benefits. Highly recommended!",
+				"user": "Tomas C"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "Very satisfied with the service. The digital tools are user-friendly and make banking easy.",
+				"user": "Gatsby C"
+			}
+		],
+		"business": [
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "YourBank's business solutions have significantly improved our cash flow management. Their services are reliable and tailored to meet our needs.",
+				"user": "Alex M"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "The business loans from YourBank were just what we needed for expansion. Their team was supportive throughout the process.",
+				"user": "Rachel S"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "Our experience with YourBank has been outstanding. Their business services are comprehensive and well-suited for growing enterprises.",
+				"user": "Mark T"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "The support we received from YourBank for our startup was exceptional. They understood our needs and provided excellent financial solutions.",
+				"user": "Linda K"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "YourBank’s business accounts are convenient and efficient. The online platform is user-friendly and has made managing our finances a lot easier.",
+				"user": "Chris J"
+			},
+			{
+				"src": "/Icon-home-page-5.svg",
+				"alt": "commas-img",
+				"text": "We’ve been impressed with the level of service from YourBank. Their business solutions are tailored to our needs and help us stay competitive.",
+				"user": "Morgan A"
+			}
+		]
+	}
+}

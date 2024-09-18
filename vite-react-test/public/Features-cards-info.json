@@ -1,0 +1,68 @@
+{
+	"onlineBanking": [
+		{
+			"title": "24/7 Account Access",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
+		},
+		{
+			"title": "Mobile Banking App",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet."
+		},
+		{
+			"title": "Secure Transactions",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information."
+		},
+		{
+			"title": "Bill Pay and Transfers",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks."
+		}
+	],
+	"financialTools": [
+		{
+			"title": "Budgeting Made Easy",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Take control of your finances with our intuitive budgeting tools. Track your spending, set savings goals, and monitor your financial health all in one place."
+		},
+		{
+			"title": "Investment Insights",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Get personalized investment advice tailored to your risk tolerance and financial goals. Stay informed with real-time market data and expert analysis."
+		},
+		{
+			"title": "Tax Optimization",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Maximize your returns and minimize your tax burden with our comprehensive tax optimization tools. Plan your taxes ahead of time and avoid any surprises."
+		},
+		{
+			"title": "Debt Management",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Stay on top of your debts with our debt management solutions. Calculate payments, explore consolidation options, and get tips to pay off your debts faster."
+		}
+	],
+	"customerSupport": [
+		{
+			"title": "24/7 Support",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "We're here for you anytime, anywhere. Our customer support team is available 24/7 to assist with your banking needs, no matter the time or place."
+		},
+		{
+			"title": "Dedicated Account Managers",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Enjoy personalized service with your own dedicated account manager. Get expert advice and support tailored to your specific financial needs."
+		},
+		{
+			"title": "Fraud Protection",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Protect yourself from fraud with our advanced monitoring tools. We keep a close eye on your accounts and alert you to any suspicious activity."
+		},
+		{
+			"title": "Comprehensive FAQs",
+			"imageUrl": "/Icon-home-page-11.svg",
+			"description": "Find answers to your questions quickly with our comprehensive FAQ section. From account setup to troubleshooting, we've got you covered."
+		}
+	]
+}

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata');
+
+body {
+	font-family: 'Lexend', sans-serif;
+
+	color: var(--text-color);
+	background-color: #1a1a1a;
+	font-family: 'Lexend', 'Inter', sans-serif;
+	width: 1596px;
+	margin: 0px auto;
+
+	@media screen and (max-width: 1440px) {
+		width: 1280px;
+		margin: 0px auto;
+	}
+
+	@media screen and (max-width: 390px) {
+		width: 358px;
+		margin: 0px auto;
+	}
+}
