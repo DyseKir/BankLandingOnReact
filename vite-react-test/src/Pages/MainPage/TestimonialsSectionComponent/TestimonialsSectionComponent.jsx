@@ -44,13 +44,36 @@ function TestimonialsSectionComponent() {
 		}
 	}
 
+	// Для обработки свайпов
+	const [touchStart, setTouchStart] = useState(0)
+	const [touchEnd, setTouchEnd] = useState(0)
+
+	const handleTouchStart = e => {
+		setTouchStart(e.targetTouches[0].clientX)
+	}
+
+	const handleTouchMove = e => {
+		setTouchEnd(e.targetTouches[0].clientX)
+	}
+
+	const handleTouchEnd = () => {
+		if (touchStart - touchEnd > 75) {
+			handleNext() // Свайп влево
+		} else if (touchStart - touchEnd < -75) {
+			handlePrev() // Свайп вправо
+		}
+	}
+
+	// Логика для видимых карточек
 	const visibleTestimonials =
 		carouselItems.length > 0
-			? [
-					carouselItems[currentIndex % carouselItems.length],
-					carouselItems[(currentIndex + 1) % carouselItems.length],
-					carouselItems[(currentIndex + 2) % carouselItems.length],
-			  ]
+			? window.innerWidth <= 390 // Проверка на мобильное устройство
+				? [carouselItems[currentIndex]] // Возвращаем только одну карточку для мобильного
+				: [
+						carouselItems[currentIndex % carouselItems.length],
+						carouselItems[(currentIndex + 1) % carouselItems.length],
+						carouselItems[(currentIndex + 2) % carouselItems.length],
+				  ] // Возвращаем три карточки для десктопа
 			: []
 
 	return (
@@ -74,7 +97,12 @@ function TestimonialsSectionComponent() {
 					/>
 				</div>
 
-				<div className='testimonials-section__carousel-wrapper'>
+				<div
+					className='testimonials-section__carousel-wrapper'
+					onTouchStart={handleTouchStart}
+					onTouchMove={handleTouchMove}
+					onTouchEnd={handleTouchEnd}
+				>
 					<img
 						src='/Button-home-page.svg'
 						alt='left-arrow'

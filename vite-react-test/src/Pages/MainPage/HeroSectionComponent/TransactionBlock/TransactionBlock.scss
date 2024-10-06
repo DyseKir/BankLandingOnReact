@@ -26,13 +26,23 @@
 		height: 182px;
 		display: flex;
 		flex-direction: column;
+		@media screen and (max-width: 1440px) {
+			width: 356px;
+			height: 148px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 264px;
+			height: 108px;
+		}
 	}
 	&__arrow-group {
 		position: absolute;
 		right: -52px;
 		top: 110px;
 	}
-
+	&__exchange-container-1 {
+		width: 100%;
+	}
 	&__exchange-container-2 {
 		display: flex;
 		flex-wrap: wrap;
@@ -142,7 +152,7 @@
 			padding: 8px 16px;
 		}
 	}
-	&__monthly-income-svg {
+	&__monthly-income-sv {
 		width: 38px;
 		height: 38px;
 		@media screen and (max-width: 1440px) {
@@ -311,6 +321,14 @@
 			z-index: 3;
 			width: 446px;
 			height: 76px;
+			@media screen and (max-width: 1440px) {
+				width: 354px;
+				height: 62px;
+			}
+			@media screen and (max-width: 390px) {
+				width: 264px;
+				height: 44px;
+			}
 		}
 		&.midleBlock {
 			position: absolute;
@@ -320,6 +338,18 @@
 			width: 410px;
 			height: 76px;
 			opacity: 0.6;
+			@media screen and (max-width: 1440px) {
+				width: 326px;
+				height: 62px;
+				top: 22%;
+				left: 10%;
+			}
+			@media screen and (max-width: 390px) {
+				width: 244px;
+				height: 45px;
+				top: 20%;
+				left: 10%;
+			}
 		}
 		&.lastBlock {
 			position: absolute;
@@ -329,6 +359,17 @@
 			top: 30%;
 			left: 14%;
 			opacity: 0.2;
+			@media screen and (max-width: 1440px) {
+				width: 300px;
+				height: 62px;
+				top: 31%;
+				left: 14%;
+			}
+			@media screen and (max-width: 390px) {
+				width: 222px;
+				height: 44px;
+				top: 26%;
+			}
 		}
 	}
 }

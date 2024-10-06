@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './UserUiComponent.scss'
 import UserUiCustomSelect from './UserUiCustomSelect/UserUiCustomSelect'
+import { CurrencyContext } from '../../../CurrencyContext' // Импортируем контекст
 
 function UserUiComponent() {
+	const userProfile = {
+		name: 'KirVish',
+		image: '/user-img-1.svg',
+	}
 	const options = [
 		{ label: 'USD', text: 'US Dollars', image: '/Image-home-page-1.svg' },
 		{ label: 'INR', text: 'Indian Rupees', image: '/Image-home-page.svg' },
@@ -20,7 +25,10 @@ function UserUiComponent() {
 		},
 	]
 
-	const [selectedOption, setSelectedOption] = useState(options[0])
+	const { selectedCurrency, handleCurrencyChange } = useContext(CurrencyContext) // Достаем данные из контекста
+	const [selectedOption, setSelectedOption] = useState(
+		options.find(option => option.label === selectedCurrency)
+	)
 
 	const filteredOptions = options.filter(
 		option => option.label !== selectedOption.label
@@ -28,6 +36,7 @@ function UserUiComponent() {
 
 	const handleOptionChange = option => {
 		setSelectedOption(option)
+		handleCurrencyChange(option.label) // Меняем валюту в контексте
 	}
 
 	return (
@@ -40,10 +49,10 @@ function UserUiComponent() {
 			<div className='UserUiComponent'>
 				<img
 					className='UserUiComponent-img'
-					src='/user-img-1.svg'
+					src={userProfile.image}
 					alt='User avatar'
 				/>
-				<p className='UserUiComponent-userName'>KirVish</p>
+				<p className='UserUiComponent-userName'>{userProfile.name}</p>
 			</div>
 		</div>
 	)

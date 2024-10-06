@@ -84,6 +84,7 @@
 		@media screen and (max-width: 390px) {
 			text-align: center;
 			font-size: 14px;
+			font-weight: 200;
 		}
 	}
 
@@ -188,12 +189,18 @@
 		right: -52px;
 		top: 110px;
 	}
-
-	&__exchange-container-2 {
-		display: flex;
-		flex-wrap: wrap;
+	&__exchange-container {
+		width: 446px;
+		height: 176px;
+		@media screen and (max-width: 1440px) {
+			width: 354px;
+			height: 140px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 264px;
+			height: 108px;
+		}
 	}
-
 	&__wrapper-1,
 	&__wrapper-2,
 	&__span-text-1,

@@ -4,11 +4,11 @@ function AskQuestionSectionComponent() {
 	return (
 		<section className='asked-questions-section'>
 			<div className='asked-questions-section__title-wrapper'>
-				<h2 className='asked-questions-section__title-wrapper-text'>
-				<span className='asked-questions-section__span-wrapper-text'>
-					Frequently
-				</span>
-						 Asked Questions
+				<h2 className='asked-questions-section__logo-text'>
+					Frequently{' '}
+					<span className='asked-questions-section__span-text'>
+						Asked Questions
+					</span>
 				</h2>
 				<p className='asked-questions-section__title-text'>
 					Still have any questions? Contact our Team via support@yourbank.com

@@ -1,16 +1,16 @@
 import React from 'react'
-import './TransactionBlock.scss' // Убедись, что у тебя есть SCSS файл для стилей
+import './TransactionBlock.scss'
 
 function TransactionBlock({
 	imageSrc,
 	altText,
 	text,
 	spanText,
-	value,
+	value, // Передаем значение, которое пришло из `HeroSectionComponent`
 	className,
 }) {
 	return (
-		<div className={`transactions__container-wrapper-block  ${className}`}>
+		<div className={`transactions__container-wrapper-block ${className}`}>
 			<div className='transactions__container-wrapper-block-container'>
 				<img
 					className='transactions__container-wrapper-block-svg'
@@ -22,7 +22,9 @@ function TransactionBlock({
 					<span className='transactions__container-span'>{spanText}</span>
 				</div>
 			</div>
-			<span className='transactions__container-span-value'>{value}</span>
+			<span className='transactions__container-span-value'>
+				{value} {/* Здесь выводим результат конверсии */}
+			</span>
 		</div>
 	)
 }

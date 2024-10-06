@@ -7,14 +7,31 @@
 	gap: 8px;
 	background: var(--text-color-2);
 	border: 1px solid var(--border-color);
-	border-radius: 0px 0px 0px 20px;
+	border-radius: 0px 0px 0px 20px; // Left corner rounded
 	outline: none;
 
 	color: var(--text-color);
 	font-family: 'Lexend', sans-serif;
 	font-size: 18px;
 	font-weight: 500;
+
+	// Media queries for responsiveness
+	@media screen and (max-width: 1440px) {
+		width: 176px;
+		font-size: 14px;
+		gap: 6px;
+		padding: 20px 14px;
+	}
+
+	@media screen and (max-width: 390px) {
+		width: 132px;
+		font-size: 8px;
+		gap: 4px;
+		padding: 14px 10px;
+	}
 }
+
+// Variant 2, with the right side rounded instead of the left
 .custom-value-input-variant-2 {
-	border-radius: 0px 0px 20px 0px;
+	border-radius: 0px 0px 20px 0px; // Right corner rounded
 }

@@ -10,6 +10,18 @@
 	border-radius: 12px;
 	border: 1px solid var(--border-color);
 	background: var(--text-color-2);
+	@media screen and (max-width: 1440px) {
+		width: 498px;
+		height: 228px;
+		padding: 40px;
+		gap: 24px;
+	}
+	@media screen and (max-width: 390px) {
+		width: 366px;
+		height: 212px;
+		padding: 30px;
+		gap: 20px;
+	}
 }
 
 .future-section__wrapper-text-block {
@@ -24,10 +36,28 @@
 	font-family: 'Lexend', sans-serif;
 	font-size: 22px;
 	font-weight: 400;
+	@media screen and (max-width: 1440px) {
+		width: 380px;
+		font-size: 18px;
+	}
+	@media screen and (max-width: 390px) {
+		font-size: 18px;
+		width: 264px;
+	}
 }
 
 .future-section__logo-arrow {
 	cursor: pointer;
+	width: 34px;
+	height: 34px;
+	@media screen and (max-width: 1440px) {
+		width: 24px;
+		height: 24px;
+	}
+	@media screen and (max-width: 390px) {
+		width: 24px;
+		height: 24px;
+	}
 }
 
 .future-section__text {
@@ -35,4 +65,10 @@
 	font-family: 'Lexend', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
+	@media screen and (max-width: 1440px) {
+		font-size: 16px;
+	}
+	@media screen and (max-width: 390px) {
+		font-size: 14px;
+	}
 }

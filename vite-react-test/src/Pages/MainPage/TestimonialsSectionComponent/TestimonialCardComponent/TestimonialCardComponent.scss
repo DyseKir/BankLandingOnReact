@@ -13,22 +13,42 @@
 		opacity: 1; /* Конечное состояние для анимации */
 		transform: translateY(0); /* Конечное смещение для анимации */
 	}
-	&__text,
+	@media screen and (max-width: 1440px) {
+		width: 326px;
+		height: 292px;
+		gap: 40px;
+	}
+	@media screen and (max-width: 390px) {
+		width: 358px;
+		height: 272px;
+		gap: 30px;
+		border: 1px solid var(--border-color);
+	}
+	&__text {
+		font-family: 'Lexend', sans-serif;
+		font-size: 18px;
+		line-height: 150%;
+		font-weight: 400;
+		text-align: center;
+		@media screen and (max-width: 1440px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 14px;
+		}
+	}
 	&__user {
 		font-family: 'Lexend', sans-serif;
 		font-size: 18px;
 		line-height: 150%;
 		text-align: center;
-	}
-
-	&__text {
-		color: var(--text-color);
-		font-weight: 400;
-	}
-
-	&__user {
-		color: var(--background-color-2);
 		font-weight: 500;
+		@media screen and (max-width: 1440px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 14px;
+		}
 	}
 
 	&__comas-block {
@@ -42,6 +62,25 @@
 			background-color: var(--border-color);
 			width: 152px;
 			height: 1px;
+
+			@media screen and (max-width: 1440px) {
+				width: 124px;
+			}
+			@media screen and (max-width: 390px) {
+				width: 120px;
+			}
+		}
+	}
+	&__comas {
+		width: 60px;
+		height: 60px;
+		@media screen and (max-width: 1440px) {
+			width: 44px;
+			height: 44px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 44px;
+			height: 44px;
 		}
 	}
 }

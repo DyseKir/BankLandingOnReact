@@ -5,8 +5,10 @@ import ExchangeButton from './ExchangeButton/ExchangeButton'
 import './HeroSectionComponent.scss'
 import selectClasses from './CustomSelect/CustomSelect.module.scss'
 import inputClasses from './CustomValueInput/CustomValueInput.module.scss'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { CurrencyContext } from '../../../CurrencyContext'
+import { getConversionRate } from '../../../ExchangeLogic' // Логика конверсии
 
 const options = [
 	{ label: 'USD', text: 'US Dollars', image: '/Image-home-page-1.svg' },
@@ -18,102 +20,78 @@ const options = [
 ]
 
 function HeroSectionComponent() {
-	const getConversionRate = (fromCurrency, toCurrency) => {
-		if (fromCurrency === 'USD' && toCurrency === 'EUR') return 0.85
-		if (fromCurrency === 'EUR' && toCurrency === 'USD') return 1.18
-
-		if (fromCurrency === 'USD' && toCurrency === 'INR') return 73.5
-		if (fromCurrency === 'INR' && toCurrency === 'USD') return 0.014
-
-		if (fromCurrency === 'USD' && toCurrency === 'JPY') return 110.6
-		if (fromCurrency === 'JPY' && toCurrency === 'USD') return 0.009
-
-		if (fromCurrency === 'USD' && toCurrency === 'UAH') return 27.0
-		if (fromCurrency === 'UAH' && toCurrency === 'USD') return 0.037
-
-		if (fromCurrency === 'USD' && toCurrency === 'KZT') return 425.0
-		if (fromCurrency === 'KZT' && toCurrency === 'USD') return 0.0024
-
-		if (fromCurrency === 'EUR' && toCurrency === 'INR') return 86.5
-		if (fromCurrency === 'INR' && toCurrency === 'EUR') return 0.012
-
-		if (fromCurrency === 'EUR' && toCurrency === 'JPY') return 129.8
-		if (fromCurrency === 'JPY' && toCurrency === 'EUR') return 0.0077
-
-		if (fromCurrency === 'EUR' && toCurrency === 'UAH') return 31.5
-		if (fromCurrency === 'UAH' && toCurrency === 'EUR') return 0.032
-
-		if (fromCurrency === 'EUR' && toCurrency === 'KZT') return 500.0
-		if (fromCurrency === 'KZT' && toCurrency === 'EUR') return 0.002
-
-		if (fromCurrency === 'INR' && toCurrency === 'JPY') return 1.5
-		if (fromCurrency === 'JPY' && toCurrency === 'INR') return 0.67
-
-		if (fromCurrency === 'INR' && toCurrency === 'UAH') return 0.37
-		if (fromCurrency === 'UAH' && toCurrency === 'INR') return 2.7
-
-		if (fromCurrency === 'INR' && toCurrency === 'KZT') return 5.8
-		if (fromCurrency === 'KZT' && toCurrency === 'INR') return 0.17
-
-		if (fromCurrency === 'JPY' && toCurrency === 'UAH') return 0.25
-		if (fromCurrency === 'UAH' && toCurrency === 'JPY') return 4.0
-
-		if (fromCurrency === 'JPY' && toCurrency === 'KZT') return 3.3
-		if (fromCurrency === 'KZT' && toCurrency === 'JPY') return 0.3
-
-		if (fromCurrency === 'UAH' && toCurrency === 'KZT') return 15.7
-		if (fromCurrency === 'KZT' && toCurrency === 'UAH') return 0.064
-
-		// Default conversion rate
-		return 1.0
-	}
+	const { selectedCurrency, addToMonthlySum } = useContext(CurrencyContext) // Основная валюта пользователя
 	const [firstSelectedOption, setFirstSelectedOption] = useState(options[0])
 	const [secondSelectedOption, setSecondSelectedOption] = useState(
 		options.find(option => option.label !== options[0].label)
 	)
 	const [firstInputValue, setFirstInputValue] = useState('')
 	const [secondInputValue, setSecondInputValue] = useState('')
+	const [transactionResult, setTransactionResult] = useState('') // Результат конверсии для транзакции
 
-	const handleFirstSelectChange = option => {
-		setFirstSelectedOption(option)
-		if (option.label === secondSelectedOption.label) {
-			setSecondSelectedOption(options.find(opt => opt.label !== option.label))
-		}
-		updateConversion(option, secondSelectedOption, firstInputValue)
-	}
-
-	const handleSecondSelectChange = option => {
-		setSecondSelectedOption(option)
-		if (option.label === firstSelectedOption.label) {
-			setFirstSelectedOption(options.find(opt => opt.label !== option.label))
-		}
-		updateConversion(firstSelectedOption, option, secondInputValue)
-	}
-
+	// Функция для конвертации первой валюты во вторую (например, USD в INR)
 	const updateConversion = (firstOption, secondOption, value) => {
 		const conversionRate = getConversionRate(
 			firstOption.label,
 			secondOption.label
 		)
 		const convertedValue = (value * conversionRate).toFixed(2)
-		if (firstOption === firstSelectedOption) {
-			setSecondInputValue(convertedValue)
-		} else {
-			setFirstInputValue(convertedValue)
-		}
+		console.log(
+			`Конвертация ${value} ${firstOption.label} в ${secondOption.label}: ${convertedValue}`
+		)
+		setSecondInputValue(convertedValue)
 	}
-	const exchangeValues = () => {
-		//Input
-		const getAValue = firstInputValue
-		console.log(getAValue)
-		const getBValue = secondInputValue
-		console.log(getBValue)
 
-		const getACourse = firstSelectedOption
-		console.log(getACourse)
-		const getBCourse = secondSelectedOption
-		console.log(getBCourse)
+	// Логика для вывода результата в основной валюте пользователя
+	const convertToUserCurrency = (secondOption, value) => {
+		// Конвертируем результат второго инпута в основную валюту
+		const conversionRateToMainCurrency = getConversionRate(
+			secondOption.label,
+			selectedCurrency
+		)
+		const convertedResult = (value * conversionRateToMainCurrency).toFixed(2)
+		console.log(
+			`Конвертация ${value} ${secondOption.label} в основную валюту ${selectedCurrency}: ${convertedResult}`
+		)
+		return convertedResult
 	}
+
+	// Функция для обработки клика обмена валют
+	const exchangeValues = () => {
+		console.log(`Обмен значений...`)
+		console.log(
+			`Сумма во втором инпуте: ${secondInputValue} ${secondSelectedOption.label}`
+		)
+		addToMonthlySum(parseFloat(secondInputValue)) // Добавляем сумму к месячной
+
+		// Выполняем проверку и конвертируем результат в основную валюту пользователя
+		const resultInMainCurrency = convertToUserCurrency(
+			secondSelectedOption,
+			secondInputValue
+		)
+		setTransactionResult(`${resultInMainCurrency} ${selectedCurrency}`) // Сохраняем результат для блока транзакций
+
+		console.log(
+			`Результат для блока транзакций: ${resultInMainCurrency} ${selectedCurrency}`
+		)
+	}
+
+	const handleFirstSelectChange = option => {
+		console.log(`Выбрана первая валюта: ${option.label}`)
+		setFirstSelectedOption(option)
+		updateConversion(option, secondSelectedOption, firstInputValue)
+	}
+
+	const handleSecondSelectChange = option => {
+		console.log(`Выбрана вторая валюта: ${option.label}`)
+		setSecondSelectedOption(option)
+		updateConversion(firstSelectedOption, option, secondInputValue)
+	}
+
+	useEffect(() => {
+		// Обновляем transactionResult при смене основной валюты
+		setTransactionResult(`0.00 ${selectedCurrency}`)
+	}, [selectedCurrency])
 
 	return (
 		<section className='hero-section'>
@@ -171,25 +149,9 @@ function HeroSectionComponent() {
 						imageSrc='/Sub-Container-home-page.svg'
 						altText='Exchange icon'
 						text='Transaction'
-						spanText='Joel Kenley'
-						value='-$68.00'
+						spanText='Amount' // Отображаем информацию об основной валюте
+						value={transactionResult} // Отображаем результат конверсии с основной валютой
 						className='mainBlock'
-					/>
-					<TransactionBlock
-						imageSrc='/Sub-Container-home-page.svg'
-						altText='Exchange icon'
-						text='Transaction'
-						spanText='Joel Kenley'
-						value='-$68.00'
-						className='midleBlock'
-					/>
-					<TransactionBlock
-						imageSrc='/Sub-Container-home-page.svg'
-						altText='Exchange icon'
-						text='Transaction'
-						spanText='Joel Kenley'
-						value='-$68.00'
-						className='lastBlock'
 					/>
 				</div>
 				<h3 className='transactions__title'>Money Exchange</h3>
@@ -215,6 +177,7 @@ function HeroSectionComponent() {
 							placeholder='Enter Amount'
 							value={firstInputValue}
 							onValueChange={value => {
+								console.log(`Ввод значения в первый инпут: ${value}`)
 								setFirstInputValue(value)
 								updateConversion(
 									firstSelectedOption,
@@ -228,6 +191,7 @@ function HeroSectionComponent() {
 							value={secondInputValue}
 							additionalClass={inputClasses['custom-value-input-variant-2']}
 							onValueChange={value => {
+								console.log(`Ввод значения во второй инпут: ${value}`)
 								setSecondInputValue(value)
 								updateConversion(
 									secondSelectedOption,

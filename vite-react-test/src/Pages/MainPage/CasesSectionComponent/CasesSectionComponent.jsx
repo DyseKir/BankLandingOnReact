@@ -26,6 +26,7 @@ function CasesSectionComponent() {
 				<div className='individuals-block__advantages'>
 					<article className='individuals-block__article-top'>
 						<img
+							className='individuals-block__article-img'
 							src='/Icon-Container-home-page-4.svg'
 							alt='Personal finances'
 						/>
@@ -35,6 +36,7 @@ function CasesSectionComponent() {
 					</article>
 					<article className='individuals-block__article-top'>
 						<img
+							className='individuals-block__article-img'
 							src='/Icon-Container-home-page-5.svg'
 							alt='Saving for the future'
 						/>
@@ -43,11 +45,16 @@ function CasesSectionComponent() {
 						</p>
 					</article>
 					<article className='individuals-block__article-bottom'>
-						<img src='/Icon-Container-home-page-6.svg' alt='Homeownership' />
+						<img
+							className='individuals-block__article-img'
+							src='/Icon-Container-home-page-6.svg'
+							alt='Homeownership'
+						/>
 						<p className='individuals-block__article-text'>Homeownership</p>
 					</article>
 					<article className='individuals-block__article-bottom'>
 						<img
+							className='individuals-block__article-img'
 							src='/Icon-Container-home-page-7.svg'
 							alt='Education funding'
 						/>

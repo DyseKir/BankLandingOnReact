@@ -9,6 +9,17 @@
 	position: relative;
 	background: var(--text-color-2);
 	cursor: pointer;
+	@media screen and (max-width: 1440px) {
+		width: 176px;
+		gap: 6px;
+		padding: 14px;
+	}
+	@media screen and (max-width: 390px) {
+		width: 132px;
+		gap: 6px;
+		padding: 10px;
+	}
+
 	&__container {
 		display: flex;
 		align-items: center;
@@ -20,12 +31,24 @@
 		font-family: 'Lexend', sans-serif;
 		font-size: 16px;
 		font-weight: 400;
+		@media screen and (max-width: 1440px) {
+			font-size: 12px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 8px;
+		}
 	}
 	&__text {
 		color: var(--text-color-3);
 		font-family: 'Lexend', sans-serif;
 		font-size: 14px;
 		font-weight: 300;
+		@media screen and (max-width: 1440px) {
+			font-size: 10px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 8px;
+		}
 	}
 	&__options {
 		display: flex;
@@ -41,6 +64,14 @@
 		height: 34px;
 		border-radius: 50% 50%;
 		object-fit: cover;
+		@media screen and (max-width: 1440px) {
+			width: 26px;
+			height: 26px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 20px;
+			height: 20px;
+		}
 	}
 }
 .custom-select-variant-2 {

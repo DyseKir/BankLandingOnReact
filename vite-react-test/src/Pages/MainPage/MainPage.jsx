@@ -5,7 +5,6 @@ import FutureSectionComponent from './FutureSectionComponent/FutureSectionCompon
 import AskQuestionSectionComponent from './AskQuestionSectionComponent/AskQuestionSectionComponent'
 import TestimonialsSectionComponent from './TestimonialsSectionComponent/TestimonialsSectionComponent'
 import StartFinancialJourneyComponent from './StartFinancialJourneyComponent/StartFinancialJourneyComponent'
-
 function MainPage() {
 	return (
 		<>

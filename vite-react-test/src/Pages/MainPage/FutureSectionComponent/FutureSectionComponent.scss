@@ -1,6 +1,11 @@
 .future-section {
 	padding: 75px 0;
 
+	&__logo-block {
+		@media screen and (max-width: 390px) {
+			text-align: center;
+		}
+	}
 	&__logo-text,
 	&__span-text {
 		font-family: 'Lexend', sans-serif;
@@ -33,6 +38,15 @@
 		height: 338px;
 		border-radius: 12px;
 		background: var(--text-color-2);
+		@media screen and (max-width: 1440px) {
+			width: 244px;
+			height: 268px;
+			padding: 40px;
+			gap: 20px;
+		}
+		@media screen and (max-width: 390px) {
+			display: none;
+		}
 	}
 
 	&__button {
@@ -60,6 +74,14 @@
 			background-color: var(--background-color);
 			transform: scale(1.1); /* Увеличение активной кнопки */
 		}
+		@media screen and (max-width: 1440px) {
+			font-size: 12px;
+			padding: 14px 20px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 12px;
+			padding: 14px 20px;
+		}
 	}
 
 	&__wrapper {
@@ -70,7 +92,6 @@
 
 	&__wrapper-blocks {
 		display: flex;
-		align-items: flex-start;
 		gap: 30px;
 		width: 1258px;
 		height: 574px;
@@ -78,6 +99,21 @@
 		opacity: 0;
 		transform: translateY(20px); /* Начальная позиция снизу */
 		transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+
+		@media screen and (max-width: 1440px) {
+			gap: 20px;
+			width: 1074px;
+			height: 476px;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		@media screen and (max-width: 390px) {
+			gap: 20px;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			width: 366px;
+			height: 888px;
+		}
 	}
 	&__wrapper-blocks.visible {
 		opacity: 1;

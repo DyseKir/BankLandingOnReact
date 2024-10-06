@@ -1,0 +1,48 @@
+//===============main=========//
+@import '../src/App.scss';
+@import '../src/main.scss';
+//==============MainPage=================//
+@import '../src/Pages/MainPage/AskQuestionSectionComponent/AskQuestionSectionComponent.scss';
+@import '../src/Pages/MainPage/ButtonComponent.jsx/ButtonComponent.scss';
+@import '../src/Pages/MainPage/CasesSectionComponent/CasesSectionComponent.scss';
+@import '../src/Pages/MainPage/FutureSectionComponent/FutureSectionComponent.scss';
+@import '../src/Pages/MainPage/HeroSectionComponent/CustomOption/CustomOption.scss';
+@import '../src/Pages/MainPage/HeroSectionComponent/CustomSelect/CustomSelect.module.scss';
+@import '../src/Pages/MainPage/HeroSectionComponent/CustomValueInput/CustomValueInput.module.scss';
+@import '../src/Pages/MainPage/HeroSectionComponent/ExchangeButton/ExchangeButton.scss';
+@import '../src/Pages/MainPage/HeroSectionComponent/TransactionBlock/TransactionBlock.scss';
+@import '../src/Pages/MainPage/HeroSectionComponent/HeroSectionComponent.scss';
+//==============AboutPage=================//
+@import '../src/Pages/AboutPage/AboutPageHeroComponent/AboutPageHeroComponent.scss';
+@import '../src/Pages/AboutPage/MissionVision/MissionVision.scss';
+@import '../src/Pages/AboutPage/PressReleasesComponent/PressReleasesComponent.scss';
+@import '../src/Pages/AboutPage/AboutPage.scss';
+//===============SecurityPage=============//
+// @import '../src/Pages/SecurityPage/AskQuestionSectionComponent/AskQuestionSectionComponent.scss';
+@import '../src/Pages/SecurityPage/OurBenefitsComponent/OurBenefitsComponent.scss';
+@import '../src/Pages/SecurityPage/SecurityPageHeroSection/SecurityPageHeroSection.scss';
+@import '../src/Pages/SecurityPage/SecurityPage.scss';
+//===============CareerPage===============//
+// @import '../src/Pages/CareerPage/AskQuestionSectionComponent/AskQuestionSectionComponent.scss';
+@import '../src/Pages/CareerPage/HeroCareerPageComponent/HeroCareerPageComponent.scss';
+@import '../src/Pages/CareerPage/JobOpeningsSectionComponent/JobOpeningsSectionComponent.scss';
+@import '../src/Pages/CareerPage/OurBenefitsComponent/OurBenefitsComponent.scss';
+@import '../src/Pages/CareerPage/OurValuesComponent/OurValuesComponent.scss';
+// @import '../src/Pages/CareerPage/StartFinancialJourneyComponent/StartFinancialJourneyComponent.scss';
+//===============Header===============//
+@import '../src/Pages/HeaderComponent/HeaderBurgerMenuComponent/HeaderBurgerMenuComponent.scss';
+@import '../src/Pages/HeaderComponent/HeaderButtonComponent/HeaderButtonComponent.scss';
+@import '../src/Pages/HeaderComponent/HeaderComponent.scss';
+@import '../src/Pages/HeaderComponent/HeaderComponentUserUi.scss';
+@import '../src/Pages/HeaderComponent/HeaderLogoComponent/HeaderLogoComponent.scss';
+@import '../src/Pages/HeaderComponent/HeaderNavLinksComponent/HeaderNavLinksComponent.scss';
+@import '../src/Pages/HeaderComponent/UserUiComponent/UserUiComponent.scss';
+@import '../src/Pages/HeaderComponent/UserUiComponent/UserUiCustomOption/UserUiCustomOption.scss';
+@import '../src/Pages/HeaderComponent/UserUiComponent/UserUiCustomSelect/UserUiCustomSelect.scss';
+//===============Footer===============//
+@import '../src/Pages/FooterComponent/FooterComponent.scss';
+
+//===============SignUpModal=============//
+@import '../src/Pages/SignUpModal/SignUpModal.scss';
+//===============LogInModal==============//
+@import '../src/Pages/LoginModal/LoginModal.scss';

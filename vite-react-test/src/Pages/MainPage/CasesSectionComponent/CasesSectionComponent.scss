@@ -1,12 +1,22 @@
 .cases-section {
 	padding: 150px 0px;
-
+	&__text-wrapper {
+		@media screen and (max-width: 390px) {
+			text-align: center;
+		}
+	}
 	&__logo-text {
 		font-family: 'Lexend', sans-serif;
 		color: var(--background-color-2);
 		font-size: 48px;
 		font-weight: 500;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 38px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 28px;
+		}
 	}
 
 	&__text {
@@ -15,6 +25,12 @@
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -26,6 +42,26 @@
 	gap: 90px;
 	align-self: stretch;
 
+	@media screen and (max-width: 1440px) {
+		gap: 60px;
+	}
+	@media screen and (max-width: 390px) {
+		gap: 30px;
+		flex-direction: column;
+	}
+
+	&__article-img {
+		width: 74px;
+		height: 74px;
+		@media screen and (max-width: 1440px) {
+			width: 64px;
+			height: 64px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 64px;
+			height: 64px;
+		}
+	}
 	&__advantages {
 		width: 748px;
 		height: 534px;
@@ -35,6 +71,18 @@
 		border-radius: 20px;
 		background: var(--text-color-2);
 		gap: 20px;
+		@media screen and (max-width: 1440px) {
+			width: 610px;
+			height: 414px;
+			padding: 40px;
+			gap: 10px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 358px;
+			height: 370px;
+			padding: 20px;
+			gap: 10px;
+		}
 	}
 
 	&__article-top,
@@ -48,14 +96,36 @@
 		border-radius: 16px;
 		border: 1px solid var(--border-color);
 		background: var(--text-color-2);
+		@media screen and (max-width: 1440px) {
+			gap: 14px;
+			padding: 24px;
+			width: 260px;
+		}
+		@media screen and (max-width: 390px) {
+			gap: 14px;
+			padding: 20px 14px;
+			width: 154px;
+		}
 	}
 
 	&__article-top {
 		height: 222px;
+		@media screen and (max-width: 1440px) {
+			height: 174px;
+		}
+		@media screen and (max-width: 390px) {
+			height: 160px;
+		}
 	}
 
 	&__article-bottom {
 		height: 192px;
+		@media screen and (max-width: 1440px) {
+			height: 150px;
+		}
+		@media screen and (max-width: 390px) {
+			height: 160px;
+		}
 	}
 
 	&__article-text {
@@ -65,6 +135,12 @@
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -76,18 +152,41 @@
 	gap: 62px;
 	justify-content: space-between;
 	position: relative;
-
+	@media screen and (max-width: 1440px) {
+		gap: 50px;
+		width: 610px;
+	}
+	@media screen and (max-width: 390px) {
+		flex-direction: column;
+		width: 358px;
+	}
 	&__article-wrapper {
 		display: flex;
 		align-items: flex-start;
 		gap: 100px;
 		align-self: stretch;
+		@media screen and (max-width: 1440px) {
+			gap: 100px;
+		}
+		@media screen and (max-width: 390px) {
+			gap: 60px;
+			flex-direction: column;
+			padding: 0px 50px;
+			align-items: center;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 14px;
+		@media screen and (max-width: 1440px) {
+			gap: 10px;
+		}
+		@media screen and (max-width: 390px) {
+			gap: 10px;
+			text-align: center;
+		}
 	}
 
 	&__text-logo {
@@ -96,6 +195,12 @@
 		font-size: 30px;
 		font-weight: 500;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 26px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 20px;
+		}
 	}
 
 	&__article {
@@ -115,6 +220,30 @@
 			bottom: 0;
 			border-right: 1px dashed var(--border-color);
 		}
+
+		@media screen and (max-width: 1440px) {
+			width: 136px;
+			height: 110px;
+			gap: 5px;
+		}
+
+		@media screen and (max-width: 390px) {
+			width: 258px;
+			height: 86px;
+			align-items: center;
+
+			&:not(:last-child)::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: auto;
+				bottom: -10px; // Сместите полоску ниже элемента
+				left: 0;
+				border-right: none;
+				border-bottom: 1px dashed var(--border-color); // Полоска снизу
+				width: 100%; // Заставляем полоску растянуться по всей ширине
+			}
+		}
 	}
 
 	&__text {
@@ -123,9 +252,16 @@
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 15px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 14px;
+		}
 	}
 
 	&__btn {
+		display: inline-block; // Это предотвратит расширение кнопки на всю ширину блока
 		color: var(--text-color);
 		text-align: center;
 		font-family: 'Lexend', sans-serif;
@@ -150,13 +286,25 @@
 		border-radius: 60px 60px 60px 60px;
 		padding: 25px;
 		z-index: 0;
-		width: 500px;
 		font-family: 'Lexend', sans-serif;
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 150%;
 		&.visible {
 			display: block;
+		}
+
+		@media screen and (max-width: 1440px) {
+			font-size: 14px;
+			width: 450px;
+		}
+		@media screen and (max-width: 390px) {
+			bottom: -18%;
+			display: flex;
+			flex-direction: column;
+			width: 350px;
+			font-size: 12px;
+			left: 1%;
 		}
 	}
 	&__percent-text {
@@ -165,6 +313,12 @@
 		font-size: 58px;
 		font-weight: 500;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 40px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 40px;
+		}
 	}
 }
 
@@ -175,7 +329,13 @@
 	flex-direction: row-reverse;
 	gap: 90px;
 	align-self: stretch;
-
+	@media screen and (max-width: 1440px) {
+		gap: 60px;
+	}
+	@media screen and (max-width: 390px) {
+		gap: 30px;
+		flex-direction: column;
+	}
 	&__advantages {
 		width: 748px;
 		height: 534px;
@@ -185,6 +345,18 @@
 		border-radius: 20px;
 		background: var(--text-color-2);
 		gap: 20px;
+		@media screen and (max-width: 1440px) {
+			width: 610px;
+			height: 414px;
+			padding: 40px;
+			gap: 10px;
+		}
+		@media screen and (max-width: 390px) {
+			width: 358px;
+			height: 370px;
+			padding: 20px;
+			gap: 10px;
+		}
 	}
 
 	&__article-top,
@@ -198,14 +370,36 @@
 		border-radius: 16px;
 		border: 1px solid var(--border-color);
 		background: var(--text-color-2);
+		@media screen and (max-width: 1440px) {
+			gap: 14px;
+			padding: 24px;
+			width: 260px;
+		}
+		@media screen and (max-width: 390px) {
+			gap: 14px;
+			padding: 20px 14px;
+			width: 154px;
+		}
 	}
 
 	&__article-top {
 		height: 222px;
+		@media screen and (max-width: 1440px) {
+			height: 174px;
+		}
+		@media screen and (max-width: 390px) {
+			height: 160px;
+		}
 	}
 
 	&__article-bottom {
 		height: 192px;
+		@media screen and (max-width: 1440px) {
+			height: 150px;
+		}
+		@media screen and (max-width: 390px) {
+			height: 160px;
+		}
 	}
 
 	&__article-text {
@@ -215,5 +409,11 @@
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 150%;
+		@media screen and (max-width: 1440px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 390px) {
+			font-size: 14px;
+		}
 	}
 }
